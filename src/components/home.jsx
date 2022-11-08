@@ -14,10 +14,10 @@ export default function HomeComponent() {
   const [once, setOnce] = useState([]); 
   const [playerOnce, setPlayerOnce] = useState (true)
 
-  useEffect(() => {
-    // Update the document title using the browser API
-    document.title = `You clicked ${count} times`;
-  });
+  // useEffect(() => {
+  //   // Update the document title using the browser API
+  //   document.title = `You clicked ${count} times`;
+  // });
 
   const setvalor = (index) => {
     setOnce([once].concat(index)) //
