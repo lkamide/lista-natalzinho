@@ -92,3 +92,13 @@ body{
 .bx--chart-holder {
   background-color: #e0e0e0;
 }
+
+.photos { 
+  width: 150%;
+  height: 150%;
+}
+
+.btn-site {
+  padding-top: 12px;
+  width: 150% !important;
+}

@@ -9,7 +9,7 @@ function HeaderComponent() {
     render() {
       return <>
      <Header aria-label="IBM Platform Name">
-          <HeaderName href="#" prefix="">
+          <HeaderName href="/" prefix=""  >
             Listinha do Kam
           </HeaderName>
         </Header>
@@ -17,10 +17,8 @@ function HeaderComponent() {
           <header className="headerColor">
       
             <Row className='header-title'>
-              {/* <div className="bx--grid bx--grid--no-gutter bx--grid--full-width"> */}
                 <div className="" style={{paddingTop:"13%"}}>
                   <h3>Bem vindo a minha lista</h3>
-                {/* </div> */}
               </div>
             </Row>
       
