@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import YouTube from 'react-youtube';
+
+
 import {
   Accordion,
   AccordionItem,
@@ -10,7 +12,12 @@ import {
 export default function HomeComponent() {
   const [count, setCount] = useState(0);
   const [once, setOnce] = useState([]); 
-  const [playerOnce, setPlayerOnce] = useState ()
+  const [playerOnce, setPlayerOnce] = useState (true)
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
 
   const setvalor = (index) => {
     setOnce([once].concat(index)) //
@@ -41,6 +48,10 @@ export default function HomeComponent() {
       message: "Você tem que ter um pouco de paciencia",
       giphy: "https://giphy.com/embed/xl5QdxfNonh3q"
     },
+    {
+      title: "Agora com toda a certeza do mundo sera a minha lista ",
+      message: "🐯",
+    }
   ];
 
   const tags = [
@@ -55,29 +66,46 @@ export default function HomeComponent() {
   ]
 
   const videoOptions = {
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      rel: 0,
-      showinfo: 0,
-      mute: 0,
-      loop: 0
-    }
+    playerVars: { 
+      'autoplay': 1,
+      'controls': 0,
+      'autohide': 1,
+      'wmode': 'opaque',
+      'loop':1
+  },
   };
 
-  const onPlayerReady = (event) => {
-    console.log("entrei")
-    console.log(event)
-    // access to player in all event handlers via event.target
-    event.target.playVideo();
+  
+
+  // function sleep (time) {
+  //   return new Promise((resolve) => setTimeout(resolve, time));
+  // }
+
+  const onPlayerReady = async (event) => {
+    // if (event.data != null ) return
+    console.log("dentro do ready ", event) 
+    // setTimeout(() => console.log('Initial timeout!'), 1000);
+    // setTimeout(a°sync () => {
+      // await sleep(2000);
+      // if (playerOnce) {
+        // console.log("entrei", playerOnce)
+        // console.log(event)
+        // access to player in all event handlers via event.target
+        // await setPlayerOnce(false)
+        // event.target.mute();
+        // event.target.getPlayerState();
+        event.target.playVideo();
+        // event.target.unMute();
+        // document.getElementsByTagName("video")[0].play()
+        // console.log("saida3", playerOnce)
+      // }
+    // }, 2000);
   }
+
 
   return (
     <>
-     <YouTube videoId="K-3HUtikJ7A" opts={videoOptions} onReady={onPlayerReady}  onEnd={onPlayerReady}  onPause={onPlayerReady} />
-     
       <Accordion>
-        {/* {count} */}
         {values.map((value, index) => {
           return (
             <>
@@ -90,9 +118,9 @@ export default function HomeComponent() {
                 >
                   <p>
                     {value.message}
-                    <div>
+                    { value.giphy && <div >
                       <iframe src={value.giphy} width="200" height="200" frameBorder="0" class="giphy-embed" />
-                    </div>
+                    </div>}
                     <div>
                     {  tags.map((tag)=>{
                         return (
@@ -110,6 +138,7 @@ export default function HomeComponent() {
                       })}
                     </div>
                   </p>
+                  {index == values.length-1  && <YouTube videoId="K-3HUtikJ7A" loading="lazy" opts={videoOptions} onReady={onPlayerReady } onEnd={onPlayerReady} onPause={onPlayerReady }  />}
                 </AccordionItem>
               )}
             </>
