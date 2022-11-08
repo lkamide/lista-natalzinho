@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import YouTube from 'react-youtube';
 import {
   Accordion,
   AccordionItem,
@@ -9,6 +10,7 @@ import {
 export default function HomeComponent() {
   const [count, setCount] = useState(0);
   const [once, setOnce] = useState([]); 
+  const [playerOnce, setPlayerOnce] = useState ()
 
   const setvalor = (index) => {
     setOnce([once].concat(index)) //
@@ -52,8 +54,28 @@ export default function HomeComponent() {
     }
   ]
 
+  const videoOptions = {
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      rel: 0,
+      showinfo: 0,
+      mute: 0,
+      loop: 0
+    }
+  };
+
+  const onPlayerReady = (event) => {
+    console.log("entrei")
+    console.log(event)
+    // access to player in all event handlers via event.target
+    event.target.playVideo();
+  }
+
   return (
     <>
+     <YouTube videoId="K-3HUtikJ7A" opts={videoOptions} onReady={onPlayerReady}  onEnd={onPlayerReady}  onPause={onPlayerReady} />
+     
       <Accordion>
         {/* {count} */}
         {values.map((value, index) => {
