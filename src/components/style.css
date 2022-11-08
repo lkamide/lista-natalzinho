@@ -1,0 +1,94 @@
+
+.headerColor { 
+  /* background: #161616 !important; */
+  color: white;
+}
+
+/* .content {
+  background-color:#161616 !important
+} */
+
+.header-title {
+  padding-top: 12%;
+  padding-bottom: 10%;
+}
+
+.App-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.coluna {
+  background:white;
+  word-break: break-all
+}
+
+.bold { 
+  font-weight: bold !important;
+}
+
+body{
+  background: #262626 !important
+}
+
+.user-info {
+  word-wrap: break-word;
+  text-align: justify ;
+}
+.user-info h5{
+  text-align: center ;
+}
+
+.user-logo {
+  padding-top: 20px;
+  width: 68% ;
+  border-radius: 100%;
+}
+
+.loginForm {
+  background-color: white;
+  margin-right: 20rem;
+  margin-left: 20rem;
+  margin-top: 10%;
+  padding: 67px;
+  height: 36rem;
+}
+.loginFields {
+  margin-right: 10%;
+  margin-left: 10%;
+  text-align: center;
+}
+
+.loginField {
+  margin-top: 5px !important;
+}
+.btnLogin {
+  text-align: right !important;
+}
+.logoLogin {
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 12%;
+}
+
+.tweet-image {
+  padding: 5px;
+  width: 100%;
+}
+
+.chart {
+  fill: black;
+}
+
+.bx--cc--skeleton-lines rect.chart-skeleton-backdrop {
+  fill: #e0e0e0;
+}
+
+.bx--chart-holder {
+  background-color: #e0e0e0;
+}
