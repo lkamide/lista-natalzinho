@@ -66,6 +66,8 @@ export default function HomeComponent() {
   ]
 
   const videoOptions = {
+    height: 400,
+    width: 350,
     playerVars: { 
       'autoplay': 1,
       'controls': 0,
@@ -139,7 +141,7 @@ export default function HomeComponent() {
                       })}
                     </div>
                   </p>
-                  {index == values.length-1  && <YouTube videoId="K-3HUtikJ7A" playsInline loading="lazy" opts={videoOptions} onReady={onPlayerReady } onEnd={onPlayerReady} onPause={onPlayerReady }  />}
+                  {index == values.length-1  && <YouTube videoId="K-3HUtikJ7A" loading="lazy" opts={videoOptions} onReady={onPlayerReady } onEnd={onPlayerReady} onPause={onPlayerReady }  />}
                 </AccordionItem>
               )}
             </>
