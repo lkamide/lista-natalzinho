@@ -70,6 +70,7 @@ export default function HomeComponent() {
       'autoplay': 1,
       'controls': 0,
       'autohide': 1,
+      'playsInline':1,
       'wmode': 'opaque',
       'loop':1
   },
