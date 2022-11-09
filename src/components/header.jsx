@@ -17,7 +17,7 @@ function HeaderComponent() {
           <header className="headerColor">
       
             <Row className='header-title'>
-                <div className="" style={{paddingTop:"13%"}}>
+                <div className="" style={{paddingTop:"13%", width: "100%"}}>
                   <h3>Bem vindo a minha lista</h3>
               </div>
             </Row>
