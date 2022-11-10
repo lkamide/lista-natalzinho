@@ -122,12 +122,14 @@ body{
   /* height: 70%; */
 }
 .photos-4 {
-  width:103%;
+  /* width:103%; */
+  width: 319px;
+  height: 318px;
   /* height: 70%; */
 }
 
 .btn-site-4 {
   padding-top: 12px; 
-  width: calc(104% ) !important;
+  width: calc(103% ) !important;
   /* width: 150% !important; */
 }
