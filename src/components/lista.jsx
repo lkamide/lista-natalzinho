@@ -1,24 +1,19 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
 import {
   Grid,
   Column,
   AspectRatio,
   Button,
-  Row,
-  FlexGrid,
 } from "carbon-components-react";
 import "./style.css";
 
 function ListComponent() {
   return class extends Component {
-    constructor(props) {
-      super(props);
-    }
 
     render() {
       return (
         <>
-          {/* <h1>TESTE DE NAVEGAÇÃO</h1> */}
           <Grid>
             <Column sm={2} md={2} lg={4}>
               <AspectRatio ratio="1x1">
