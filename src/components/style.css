@@ -94,8 +94,8 @@ body{
 }
 
 .photos { 
-  width: 90%;
-  height: 90%;
+  width: 90% !important;
+  height: 90% !important;
 }
 
 .btn-site {
@@ -123,13 +123,14 @@ body{
 }
 .photos-4 {
   /* width:103%; */
-  width: 319px;
-  height: 318px;
+  width:  calc(100%) !important;
+  height:  calc(300%- 100%) !important;
   /* height: 70%; */
 }
 
 .btn-site-4 {
   padding-top: 12px; 
-  width: calc(103% ) !important;
+  width: calc(90px ) !important;
+  height: calc(50px ) !important;
   /* width: 150% !important; */
 }
