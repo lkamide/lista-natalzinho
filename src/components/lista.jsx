@@ -96,6 +96,25 @@ function ListComponent() {
                 </div>
               </AspectRatio>
             </Column>
+           <Column sm={2} md={2} lg={4}>
+              <h4>Caneca</h4>
+              <AspectRatio ratio="1x1">
+                <img
+                  className="photos-4"
+                  src="https://m.media-amazon.com/images/I/41GVI-UI8qL._AC_SL1000_.jpg"
+                />
+                <div>
+                  <Button
+                    kind="tertiary"
+                    className="btn-site-4"
+                    target="_blank"
+                    href="https://www.amazon.com.br/Caneca-meme-boneco-palito-minuto/dp/B09QNHZL7F/?_encoding=UTF8&pd_rd_w=quCaM&content-id=amzn1.sym.a81c0dc3-9abd-4321-8366-58a8580704e0&pf_rd_p=a81c0dc3-9abd-4321-8366-58a8580704e0&pf_rd_r=NZ7JYRQS8QP0XG53MSQZ&pd_rd_wg=3SNYJ&pd_rd_r=bc0705e7-4775-4d72-8ce2-6f225a402150&ref_=pd_gw_ci_mcx_mi"
+                  >
+                    Ir ao site
+                  </Button>
+                </div>
+              </AspectRatio>
+            </Column>
             <Column sm={2} md={2} lg={4}>
               <h4>Bermudas - M </h4>
               <AspectRatio ratio="1x1">

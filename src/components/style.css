@@ -121,3 +121,13 @@ body{
   width: 100%;
   /* height: 70%; */
 }
+.photos-4 {
+  width:103%;
+  /* height: 70%; */
+}
+
+.btn-site-4 {
+  padding-top: 12px; 
+  width: calc(104% ) !important;
+  /* width: 150% !important; */
+}
